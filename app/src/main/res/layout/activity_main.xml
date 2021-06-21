@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B6A618"
+    tools:context=".MainActivity">
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:text="Bottom Sheet Example"
+    android:paddingLeft="120dp"
+    android:textColor="#ffffff"
+    android:textSize="20sp"
+    android:textStyle="bold"
+    >
+
+</TextView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/expand"
+            android:layout_width="204dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/shape"
+            android:text="Expand"
+            android:textAllCaps="false"
+            android:textColor="#33691E" />
+
+        <Button
+            android:id="@+id/collaps"
+            android:layout_width="204dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape"
+            android:text="Collapse"
+            android:textAllCaps="false"
+            android:textColor="#33691E" />
+
+        <Button
+            android:id="@+id/hide"
+            android:layout_width="204dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape"
+            android:text="Hide"
+            android:textAllCaps="false"
+            android:textColor="#33691E" />
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/bottomsheet"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:background="@drawable/shape"
+        app:layout_behavior="@string/bottom_sheet_behavior"
+        app:behavior_hideable="true"
+       app:behavior_peekHeight="55dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp"
+            android:text="This is bottom sheet\n\n A bottom sheet is a sheet
+that slides up from the bottom edge of the screen"
+android:textStyle="bold"
+            android:textColor="#615803"
+            android:textSize="20sp">
+
+        </TextView>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
